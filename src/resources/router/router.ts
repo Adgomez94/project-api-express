@@ -6,7 +6,7 @@ export class BaseRouter<T> {
   public controller: T
 
   constructor(
-    // se inicializa y tiene que devolver una clase un tipo T (generico)
+    // se inicializa y tiene que devolver una clase un tipo T (genérico)
     TController: { new (): T }
   ) {
     this.router =  Router()

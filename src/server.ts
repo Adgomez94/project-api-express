@@ -2,15 +2,17 @@ import express from 'express'
 import cors from 'cors'
 import morgan from 'morgan'
 import UserRouter from './resources/router/user.router'
+import { ConfigServer } from './config/config'
 
-class ServerBootstrap {
+class ServerBootstrap extends ConfigServer {
 
   public app: express.Application = express()
-  private port: number = 8000
+  private port: number = this.getNumberEnv("PORT");
 
   constructor() {
+    super()
     // Middleware
-    this.initialseMiddleware()
+    this.initialsMiddleware()
 
     // Router
     this.app.use('/api', this.routers())
@@ -18,7 +20,7 @@ class ServerBootstrap {
     this.listen()
   }
 
-  private initialseMiddleware():void {
+  private initialsMiddleware():void {
     
     this.app
       .use(cors())
