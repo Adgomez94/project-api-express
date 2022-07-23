@@ -1,0 +1,33 @@
+{
+  "name": "proyecto-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node dist/server.js",
+    "start:dev": "tsc && concurrently \"tsc -w\" \"nodemon dist/server.js\""
+  },
+  "keywords": [],
+  "author": "Adrian Duran",
+  "license": "ISC",
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3",
+    "typeorm": "^0.3.7",
+    "typeorm-naming-strategies": "^4.1.0",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.19"
+  }
+}
