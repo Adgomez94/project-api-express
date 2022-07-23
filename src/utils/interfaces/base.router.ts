@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-export class BaseRouter<T> {
+export abstract class BaseRouter<T> {
 
   public router: Router
   public controller: T
